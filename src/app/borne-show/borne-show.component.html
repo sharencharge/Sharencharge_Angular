@@ -1,0 +1,15 @@
+
+<div class="borne-show-album pb-2 router-link" *ngIf="station" routerLink="/">
+    <img [src]="station.imageURL" [alt]="station.name">
+    <!-- <p>{{createdDate}}</p> -->    
+    <h4 class="text-center mt-1">{{station.name}}</h4>
+    <div class="px-2">
+        <p>
+            {{station.model}}
+            <br>
+            Localisation: {{station.address.city}}
+        </p>
+    </div>
+    <!-- <button (click)="choixClient()" class="btn btn-success mt-1 d-flex mx-auto"> Réserver</button> -->
+</div>
+

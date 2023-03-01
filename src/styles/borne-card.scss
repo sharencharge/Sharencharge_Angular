@@ -1,0 +1,19 @@
+.borne-show-album {
+    background-color: rgb(235, 235, 222);
+    border-radius: 1em;
+    background-color: $default-green;
+    color: $default-white-color;
+    box-shadow: 0.4em 0.4em 0.8em 0 $default-blue;
+    transition: ease-out(0.2s);
+
+    &:hover {        
+        transform: scale(1.02);
+        transition: ease-in(0.2s);
+    }
+
+    img {
+      width: 100%;
+      border-top-right-radius: 1em;
+      border-top-left-radius: 1em;
+    }
+  }

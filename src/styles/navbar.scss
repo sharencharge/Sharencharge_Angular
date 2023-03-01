@@ -1,0 +1,14 @@
+
+.navbar {
+    background-color: $background-navbar;
+    color: $default-white-color;
+
+    .navbar-brand {
+        color: $default-white-color;
+
+        &:hover {
+            text-decoration: underline;
+            color: $default-white-color;
+        }
+    }
+}

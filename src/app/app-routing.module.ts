@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { BorneListComponent } from './borne-list/borne-list.component';
 
-const routes: Routes = [{path: '/menu', component: SidebarComponent}];
+const routes: Routes = [{path: '', component: BorneListComponent}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

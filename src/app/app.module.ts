@@ -23,7 +23,12 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'rawUrl',
+      useValue: 'localhost:8080/api/'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

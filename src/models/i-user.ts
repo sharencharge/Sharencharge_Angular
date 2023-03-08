@@ -1,4 +1,5 @@
 import { IAddress } from "./i-address";
+import { IRent } from "./i-rent";
 import { IStation } from "./i-station";
 
 export interface IUser{
@@ -11,8 +12,10 @@ export interface IUser{
     urlAvatar : string,
     stations : IStation[],
     addresses : IAddress[],
-    /*
-    roles : IRole[],
-    rents : IRents[]
-*/
+    
+    roles :[{
+        name : string
+    }],
+    rents : IRent[]
+
 }

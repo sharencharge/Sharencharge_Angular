@@ -1,0 +1,17 @@
+<app-navbar></app-navbar>
+<app-search></app-search>
+
+<div class="container my-5">
+    <div class="row">
+      <ng-container *ngFor="let station of stations">
+        <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+          <app-borne-show [station] = station></app-borne-show>
+        </div>
+      </ng-container>
+    </div>
+</div>
+<div class="container-form">
+  <div class="container">
+    <app-formulaire-user></app-formulaire-user>
+  </div>
+</div>

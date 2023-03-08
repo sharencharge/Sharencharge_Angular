@@ -8,6 +8,7 @@ import { BorneShowComponent } from './borne-show/borne-show.component';
 import { SearchComponent } from './search/search.component';
 import { FormulaireUserComponent } from './formulaire-user/formulaire-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     BorneShowComponent,
     SearchComponent,
     FormulaireUserComponent,
+    SidebarComponent,
 
   ],
   imports: [

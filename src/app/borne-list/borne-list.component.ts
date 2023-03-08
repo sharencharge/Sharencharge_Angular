@@ -11,7 +11,6 @@ export class BorneListComponent {
   stations : IStation[] | null = null;
 
   constructor(private apiStationService : ApiStationService) {
-    
   }
 
   ngOnInit(){

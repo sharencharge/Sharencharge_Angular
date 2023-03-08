@@ -25,7 +25,12 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: 'rawUrl',
+      useValue: 'localhost:8080/api/'
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,4 @@
+import { IRent } from "./i-rent";
 import { IStation } from "./i-station";
 
 export interface IAvailibility{
@@ -8,7 +9,6 @@ export interface IAvailibility{
     duration : number,
     price : number,
     station : IStation,
-    /*
     rents : IRent[]
-    */
+    
 }

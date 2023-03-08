@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BorneShowComponent } from './borne-show/borne-show.component';
@@ -23,12 +24,13 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     {
       provide: 'rawUrl',
-      useValue: 'localhost:8080/api/'
+      useValue: 'http://localhost:8080/api/'
     }
   ],
   bootstrap: [AppComponent]

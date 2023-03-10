@@ -6,10 +6,12 @@ import { LoginComponent } from './login/login.component';
 import { ProfilBorneComponent } from './profil/profil-borne/profil-borne.component';
 import { ProfilDetailComponent } from './profil/profil-detail/profil-detail.component';
 import { ProfilReservationComponent } from './profil/profil-reservation/profil-reservation.component';
+import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
 
 const routes: Routes = [
   {path: '', component: BorneListComponent},
   {path: 'login', component: LoginComponent}, //Page de connexion
+  {path: 'register', component: FormInscriptionComponent},
   {path: 'stations/:idStation', component: BorneDetailsComponent}, // Details station
   {path: 'profil/:idUser/mydetails', component: ProfilDetailComponent}, // Details user
   {path: 'profil/:idUser/mystation', component: ProfilBorneComponent},
@@ -20,6 +22,7 @@ const routes: Routes = [
   {path: 'profil/:idUser', component: *Component*}, REDIRECT TO'/profil/{id}/details'
   */
   {path: '**', component: BorneListComponent}
+
 ];
 
 @NgModule({

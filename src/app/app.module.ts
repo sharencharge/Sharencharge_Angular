@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
@@ -18,6 +17,7 @@ import { ProfilReservationComponent } from './profil/profil-reservation/profil-r
 import { ProfilSideMenuComponent } from './profil/profil-side-menu/profil-side-menu.component';
 import { LoginComponent } from './login/login.component';
 import { HttpTokenInterceptor } from 'src/config/http-interceptor';
+import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,6 @@ import { HttpTokenInterceptor } from 'src/config/http-interceptor';
     NavbarComponent,
     BorneShowComponent,
     SearchComponent,
-    FormulaireUserComponent,
     SidebarComponent,
     BorneListComponent,
     BorneDetailsComponent,
@@ -34,6 +33,7 @@ import { HttpTokenInterceptor } from 'src/config/http-interceptor';
     ProfilReservationComponent,
     ProfilSideMenuComponent,
     LoginComponent,
+    FormInscriptionComponent
 
   ],
   imports: [

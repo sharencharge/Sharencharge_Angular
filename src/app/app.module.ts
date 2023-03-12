@@ -10,6 +10,7 @@ import { SearchComponent } from './search/search.component';
 import { FormulaireUserComponent } from './formulaire-user/formulaire-user.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BorneListComponent } from './borne-list/borne-list.component';
+import { BorneDetailsComponent } from './borne-details/borne-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { BorneListComponent } from './borne-list/borne-list.component';
     SearchComponent,
     FormulaireUserComponent,
     BorneListComponent,
+    BorneDetailsComponent,
 
   ],
   imports: [

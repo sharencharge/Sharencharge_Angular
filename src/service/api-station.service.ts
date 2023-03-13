@@ -18,9 +18,14 @@ export class ApiStationService {
 
   findAllStations() : Observable<IStation[]> {
     return this.http.get<IStation[]>(this.url+"stations/");
-
   }
+
+  findAllStationsPageable(countItem: number, numberPage : number) : Observable<IStation[]> {
+    return this.http.get<IStation[]>(this.url+"stations/?limit="+countItem+"&page="+numberPage);
+  }
+
+
   findStation(id : number) : Observable<IStation> {
-    return this.http.get<IStation>(this.url+"stations/+id");
+    return this.http.get<IStation>(this.url+"stations/"+id);
   }
 }

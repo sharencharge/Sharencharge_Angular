@@ -1,6 +1,7 @@
-<h1>Inscription</h1>
+<div class="container p-2 my-5 border border-success ">
 <form [formGroup]="formGroupUser" class="col-md-6 col-sm-12 mx-auto mt-5">
-  <div>
+   <h3 style="text-align:center">Inscription</h3>
+    <div>
     <label for="firstname">  Prénom :</label>
     <input
       id="firstname"
@@ -20,7 +21,6 @@
   </div>
   
   <div>
-    
     <label for="lastname">  Nom :</label>
     <input
       id="lastname"
@@ -121,6 +121,7 @@
   <div *ngIf="error" class="invalid-feedback">
     {{ error }}
   </div>
+
 </form>
 
 <button class="btn btn-primary mt-5 d-flex mx-auto"
@@ -130,8 +131,20 @@
   Soumettre
 </button>
 
+<button class="btn btn-danger mt-5 d-flex mx-auto"
+        
+        
+>
+  Annule
+</button>
+
+</div>
+
 <!-- <button class="btn btn-success mt-5 d-flex mx-auto"
         (click)="testLogin()"
 >
   Login
 </button> -->
+
+
+

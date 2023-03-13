@@ -11,7 +11,7 @@ import { UserService } from 'src/service/user.service';
 })
 export class FormInscriptionComponent implements OnInit {
 
-  title: string = 'Nouvel éditeur';
+  title: string = 'Formulaire d\'inscription';
   user: User = new User();
   formGroupUser!: FormGroup;
   error: string|undefined;

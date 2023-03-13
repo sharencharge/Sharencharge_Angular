@@ -123,20 +123,18 @@
   </div>
 
 </form>
-
-<button class="btn btn-primary mt-5 d-flex mx-auto"
-        (click)="onSubmit()"
-        [disabled]="formGroupUser.invalid"
->
-  Soumettre
-</button>
-
-<button class="btn btn-danger mt-5 d-flex mx-auto"
-        
-        
->
-  Annule
-</button>
+  <div class="container d-flex justify-content-evenly p-3 text-white">
+    
+    <a href="#" class="btn btn-danger" role="button">Annule</a>
+    
+    <button class="btn btn-success ms-2"
+            (click)="onSubmit()"
+            [disabled]="formGroupUser.invalid"
+      >
+        Soumettre
+      </button>
+      
+  </div>
 
 </div>
 

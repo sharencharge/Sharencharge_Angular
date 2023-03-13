@@ -1,0 +1,10 @@
+.zshachahist {
+    background-color: $default-green;
+    color: $default-white-color;
+
+        &:hover {
+            text-decoration: underline;
+            color: $default-white-color;
+        }
+    
+}

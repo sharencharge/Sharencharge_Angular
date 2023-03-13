@@ -1,14 +1,24 @@
-<form (submit)="submit()" #profileForm>
+
+<div class="container p-3 my-5 d-flex justify-content-evenly border border-success ">
+  <form (submit)="submit()" #profileForm class="col-md-6 col-sm-12 mx-auto mt-5">
+    <h3 style="text-align:center">Connexion</h3>
     <label>
       Login : 
-      <input name="username" type="text"
+      <input name="username" type="text" class="form-control" placeholder="Adresse mail"
                           [(ngModel)]="username" required/>
     </label>
+    <br><br>
     <label>
       password : 
-      <input name="password" type="password"
+      <input name="password" type="password" class="form-control" placeholder="Mot de passe"
                          [(ngModel)]="password" required />
     </label>
-  
-    <button type="submit" [disabled]="!profileForm.checkValidity()">Submit</button>
-</form>
+  <br><br>
+
+  <div class="container d-flex justify-content-evenly p-3 text-white">
+    
+    <a href="#" class="btn btn-danger" role="button">Annuler</a>
+    <button class="btn btn-success" type="submit" [disabled]="!profileForm.checkValidity()">Submit</button>
+  </div>
+  </form>
+</div>

@@ -1,1 +1,14 @@
-<p>login works!</p>
+<form (submit)="submit()" #profileForm>
+    <label>
+      Login : 
+      <input name="username" type="text"
+                          [(ngModel)]="username" required/>
+    </label>
+    <label>
+      password : 
+      <input name="password" type="password"
+                         [(ngModel)]="password" required />
+    </label>
+  
+    <button type="submit" [disabled]="!profileForm.checkValidity()">Submit</button>
+</form>

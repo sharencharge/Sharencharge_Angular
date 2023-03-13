@@ -1,22 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IToken } from 'src/models/i-token';
 import { ApiLoginService } from 'src/service/api-login.service';
-import { ApiStationService } from 'src/service/api-station.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
   token : IToken | undefined;
 
+  username : string = ""
+  password : string  = ""
+
   constructor(private apiLoginService: ApiLoginService,) {
-    this.testLogin()
+
   }
 
-  testLogin(): void {
-    this.apiLoginService.getLogin("toto", "tototo").subscribe(res => {
+  ngOnInit() {
+   
+  }
+  
+  submit() {
+    this.apiLoginService.getLogin(this.username, this.password).subscribe(res => {
       console.log(res);
       this.token = res;
       console.log(this.token.accessToken);

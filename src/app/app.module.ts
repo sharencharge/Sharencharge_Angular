@@ -8,7 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BorneShowComponent } from './borne-show/borne-show.component';
 import { SearchComponent } from './search/search.component';
 import { FormulaireUserComponent } from './formulaire-user/formulaire-user.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BorneListComponent } from './borne-list/borne-list.component';
 import { BorneDetailsComponent } from './borne-details/borne-details.component';
 import { ProfilDetailComponent } from './profil/profil-detail/profil-detail.component';
@@ -38,7 +38,8 @@ import { HttpTokenInterceptor } from 'src/config/http-interceptor';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [
     {

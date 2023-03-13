@@ -11,7 +11,6 @@ export class BorneListComponent {
   stations : IStation[] | null = null;
 
   constructor(private apiStationService : ApiStationService) {
-    
   }
 
   ngOnInit(){
@@ -19,7 +18,7 @@ export class BorneListComponent {
   }
 
   findAllStations() : void {
-    this.apiStationService.findAllStations().subscribe(res =>{
+    this.apiStationService.findAllStationsPageable(6,0).subscribe(res =>{
       this.stations =  res;
     })
   }

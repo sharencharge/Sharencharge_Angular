@@ -7,11 +7,13 @@ import { ProfilBorneComponent } from './profil/profil-borne/profil-borne.compone
 import { ProfilDetailComponent } from './profil/profil-detail/profil-detail.component';
 import { ProfilReservationComponent } from './profil/profil-reservation/profil-reservation.component';
 import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
+import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component';
 
 const routes: Routes = [
   {path: '', component: BorneListComponent},
   {path: 'login', component: LoginComponent}, //Page de connexion
   {path: 'register', component: FormInscriptionComponent},
+  {path: 'shacha', component: ZShaChaHistComponent},
   {path: 'stations/:idStation', component: BorneDetailsComponent}, // Details station
   {path: 'profil/:idUser/mydetails', component: ProfilDetailComponent}, // Details user
   {path: 'profil/:idUser/mystation', component: ProfilBorneComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path: 'profil/:idUser', component: *Component*}, REDIRECT TO'/profil/{id}/details'
   */
   {path: '**', component: BorneListComponent}
+
+
 
 ];
 

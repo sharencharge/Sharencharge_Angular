@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BorneShowComponent } from './borne-show/borne-show.component';
 import { SearchComponent } from './search/search.component';
-import { FormulaireUserComponent } from './formulaire-user/formulaire-user.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BorneListComponent } from './borne-list/borne-list.component';
@@ -18,6 +17,9 @@ import { ProfilSideMenuComponent } from './profil/profil-side-menu/profil-side-m
 import { LoginComponent } from './login/login.component';
 import { HttpTokenInterceptor } from 'src/config/http-interceptor';
 import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
+import { FormAjoutBorneComponent } from './form-ajout-borne/form-ajout-borne.component';
+import { FooterComponent } from './footer/footer.component';
+import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,10 @@ import { FormInscriptionComponent } from './form-inscription/form-inscription.co
     ProfilReservationComponent,
     ProfilSideMenuComponent,
     LoginComponent,
-    FormInscriptionComponent
+    FormInscriptionComponent,
+    FormAjoutBorneComponent,
+    FooterComponent,
+    ZShaChaHistComponent
 
   ],
   imports: [

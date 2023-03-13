@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BorneShowComponent } from './borne-show/borne-show.component';
 import { SearchComponent } from './search/search.component';
-import { FormulaireUserComponent } from './formulaire-user/formulaire-user.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BorneListComponent } from './borne-list/borne-list.component';
 import { BorneDetailsComponent } from './borne-details/borne-details.component';
@@ -17,6 +16,10 @@ import { ProfilReservationComponent } from './profil/profil-reservation/profil-r
 import { ProfilSideMenuComponent } from './profil/profil-side-menu/profil-side-menu.component';
 import { LoginComponent } from './login/login.component';
 import { HttpTokenInterceptor } from 'src/config/http-interceptor';
+import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
+import { FormAjoutBorneComponent } from './form-ajout-borne/form-ajout-borne.component';
+import { FooterComponent } from './footer/footer.component';
+import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,7 @@ import { HttpTokenInterceptor } from 'src/config/http-interceptor';
     NavbarComponent,
     BorneShowComponent,
     SearchComponent,
-    FormulaireUserComponent,
+    SidebarComponent,
     BorneListComponent,
     BorneDetailsComponent,
     ProfilDetailComponent,
@@ -32,6 +35,10 @@ import { HttpTokenInterceptor } from 'src/config/http-interceptor';
     ProfilReservationComponent,
     ProfilSideMenuComponent,
     LoginComponent,
+    FormInscriptionComponent,
+    FormAjoutBorneComponent,
+    FooterComponent,
+    ZShaChaHistComponent
 
   ],
   imports: [

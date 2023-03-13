@@ -1,0 +1,144 @@
+<!--
+<p>form-ajout-borne works!</p>
+<h1>Ajout borne</h1>
+<form [formGroup]="formGroupBorne" class="col-md-6 col-sm-12 mx-auto mt-5">
+  
+  <div>
+    
+    <label for="nom">  Nom :</label>
+    <input
+      id="nom"
+      class="form-control"
+      formControlName="nom"
+      placeholder="Nom"
+      [class.is-invalid]="isFieldOnError('nom')"
+      [class.is-valid]="nom.valid"
+    >
+    <div class="invalid-feedback"
+         *ngIf="isFieldOnError('nom') && nom.errors"
+    >
+      <div *ngIf="nom.errors['required']">
+        Le nom est obligatoire
+      </div>
+    </div>
+  </div>
+  <div>
+    
+    <label for="modele">  Modèle :</label>
+    <input
+      id="modele"
+      class="form-control"
+      formControlName="modele"
+      placeholder="Modèle"
+      [class.is-invalid]="isFieldOnError('modele')"
+      [class.is-valid]="modele.valid"
+    >
+    <div class="invalid-feedback"
+         *ngIf="isFieldOnError('modele') && modele.errors"
+    >
+      <div *ngIf="modele.errors['required']">
+        Le modèle est obligatoire
+      </div>
+    </div>
+  </div>
+  
+  <label for="photo">  Photo :</label>
+  <div>
+    <input
+      id="photo"
+      class="form-control"
+      formControlName="photo"
+      placeholder="Photo"
+      [class.is-invalid]="isFieldOnError('photo')"
+      [class.is-valid]="photo.valid"
+    >
+    <div class="invalid-feedback"
+         *ngIf="isFieldOnError('photo') && photo.errors"
+    >
+      <div *ngIf="photo.errors['required']">
+        La photo de la borne est obligatoire
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="ville">  Ville :</label>
+    <input
+      id="ville"
+      class="form-control"
+      formControlName="ville"
+      placeholder="Ville"
+      [class.is-invalid]="isFieldOnError('ville')"
+      [class.is-valid]="ville.valid"
+    >
+    <div class="invalid-feedback"
+         *ngIf="isFieldOnError('ville') && ville.errors"
+    >
+      <div *ngIf="ville.errors['required']">
+        La ville est obligatoire
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <label for="codePostal">  Code Postal :</label>
+    <input
+      id="codePostal"
+      class="form-control"
+      formControlName="codePostal"
+      placeholder="Code Postal"
+      [class.is-invalid]="isFieldOnError('codePostal')"
+      [class.is-valid]="codePostal.valid"
+    >
+    <div class="invalid-feedback"
+         *ngIf="isFieldOnError('codePostal') && codePostal.errors"
+    >
+      <div *ngIf="codePostal.errors['required']">
+        Le code postal est obligatoire
+      </div>
+      <div *ngIf="codePostal.errors['maxlength']">
+        Le mot de passe ne doit etre supérieur à 5
+      </div>
+    </div>
+  </div>
+  
+  <div>
+    <label for="addresse">  Address :</label>
+    <input
+      id="addresse"
+      class="form-control"
+      formControlName="addresse"
+      placeholder="addresse"
+      [class.is-invalid]="isFieldOnError('addresse')"
+      [class.is-valid]="addresse.valid"
+    >
+    <div class="invalid-feedback"
+         *ngIf="isFieldOnError('addresse') && addresse.errors"
+    >
+      <div *ngIf="addresse.errors['required']">
+        L'address est obligatoire
+      </div>
+    </div>
+  </div>
+
+
+  <div *ngIf="error" class="invalid-feedback">
+    {{ error }}
+  </div>
+</form>
+
+<button class="btn btn-primary mt-5 d-flex mx-auto"
+        (click)="onSubmit()"
+        [disabled]="formGroupUser.invalid"
+>
+  Soumettre
+</button>
+
+<button class="btn btn-success mt-5 d-flex mx-auto"
+        (click)="testLogin()"
+>
+  Login
+</button> -->
+
+
+

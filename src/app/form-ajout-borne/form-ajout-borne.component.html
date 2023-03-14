@@ -1,7 +1,7 @@
 <!--
 <p>form-ajout-borne works!</p>
 <h1>Ajout borne</h1>
-<form [formGroup]="formGroupBorne" class="col-md-6 col-sm-12 mx-auto mt-5">
+<form [formGroup]="addBorne" class="col-md-6 col-sm-12 mx-auto mt-5">
   
   <div>
     
@@ -62,25 +62,6 @@
   </div>
 
   <div>
-    <label for="ville">  Ville :</label>
-    <input
-      id="ville"
-      class="form-control"
-      formControlName="ville"
-      placeholder="Ville"
-      [class.is-invalid]="isFieldOnError('ville')"
-      [class.is-valid]="ville.valid"
-    >
-    <div class="invalid-feedback"
-         *ngIf="isFieldOnError('ville') && ville.errors"
-    >
-      <div *ngIf="ville.errors['required']">
-        La ville est obligatoire
-      </div>
-    </div>
-  </div>
-
-  <div>
     <label for="codePostal">  Code Postal :</label>
     <input
       id="codePostal"
@@ -101,6 +82,26 @@
       </div>
     </div>
   </div>
+
+  <div>
+    <label for="ville">  Ville :</label>
+    <input
+      id="ville"
+      class="form-control"
+      formControlName="ville"
+      placeholder="Ville"
+      [class.is-invalid]="isFieldOnError('ville')"
+      [class.is-valid]="ville.valid"
+    >
+    <div class="invalid-feedback"
+         *ngIf="isFieldOnError('ville') && ville.errors"
+    >
+      <div *ngIf="ville.errors['required']">
+        La ville est obligatoire
+      </div>
+    </div>
+  </div>
+
   
   <div>
     <label for="addresse">  Address :</label>

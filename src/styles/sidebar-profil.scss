@@ -1,0 +1,16 @@
+.menu-selected{
+    background-color: $default-green;
+    color: $default-white-color;
+    padding: 0.5em 0;
+    font-size: h4;
+    text-align: center;
+
+}
+
+.no-selected{
+    background-color: #ffffff;
+    color: $default-green;
+    padding: 0.5em 0;
+    font-size: h4;
+    text-align: center;
+}

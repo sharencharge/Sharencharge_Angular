@@ -1,18 +1,16 @@
 
-<div class="container p-3 my-5 d-flex justify-content-evenly border border-success ">
-  <form (submit)="submit()" #profileForm class="col-md-6 col-sm-12 mx-auto mt-5">
+<div class="container p-2 my-5 border border-success ">
+  <form (submit)="submit()" #profileForm class="col-md-6 col-sm-12 mx-auto mt-5"> 
     <h3 style="text-align:center">Connexion</h3>
-    <label>
-      Login : 
+    <label for="username"> Login :</label>
       <input name="username" type="text" class="form-control" placeholder="Adresse mail"
                           [(ngModel)]="username" required/>
-    </label>
+    
     <br><br>
-    <label>
-      password : 
+    <label for="password"> Password :</label>
       <input name="password" type="password" class="form-control" placeholder="Mot de passe"
                          [(ngModel)]="password" required />
-    </label>
+    
   <br><br>
 
   <div class="container d-flex justify-content-evenly p-3 text-white">
@@ -22,3 +20,6 @@
   </div>
   </form>
 </div>
+
+
+

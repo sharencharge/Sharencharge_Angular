@@ -20,6 +20,7 @@ import { FormInscriptionComponent } from './form-inscription/form-inscription.co
 import { FormAjoutBorneComponent } from './form-ajout-borne/form-ajout-borne.component';
 import { FooterComponent } from './footer/footer.component';
 import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component';
+import { AccessGuard } from 'src/config/access-guard';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component'
       provide: 'rawUrl',
       useValue: 'http://localhost:8080/api/'
     },
-    { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: HttpTokenInterceptor, multi: true },
+    [AccessGuard]
   ],
   bootstrap: [AppComponent]
 })

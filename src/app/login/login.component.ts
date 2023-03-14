@@ -27,7 +27,9 @@ export class LoginComponent implements OnInit{
       console.log(res);
       this.token = res;
       console.log(this.token.accessToken);
+      console.log(this.token.id);
       localStorage.setItem("jwtToken", this.token.accessToken);
+      localStorage.setItem("id", String(this.token.id));
       
     });
   }

@@ -1,0 +1,127 @@
+<div class="container p-2 my-5 border border-success " *ngIf="user">
+    <form [formGroup]="formGroupUser" class="col-md-6 col-sm-12 mx-auto mt-5">
+       <h3 style="text-align:center">Inscription</h3>
+        <div>
+        <label for="firstname">  Prénom :</label>
+        <input
+          id="firstname"
+          class="form-control"
+          formControlName="firstname"
+          placeholder="Prénom"
+          [class.is-invalid]="isFieldOnError('firstname')"
+          [class.is-valid]="firstname.valid"
+        >
+        <div class="invalid-feedback"
+             *ngIf="isFieldOnError('firstname') && firstname.errors"
+        >
+          <div *ngIf="firstname.errors['required']">
+            Le prénom est obligatoire
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <label for="lastname">  Nom :</label>
+        <input
+          id="lastname"
+          class="form-control"
+          formControlName="lastname"
+          placeholder="Nom"
+          [class.is-invalid]="isFieldOnError('lastname')"
+          [class.is-valid]="lastname.valid"
+        >
+        <div class="invalid-feedback"
+             *ngIf="isFieldOnError('lastname') && lastname.errors"
+        >
+          <div *ngIf="lastname.errors['required']">
+            Le nom est obligatoire
+          </div>
+        </div>
+      </div>
+      
+      <label for="phoneNumber">  Téléphone :</label>
+      <div>
+        <input
+          id="phoneNumber"
+          class="form-control"
+          formControlName="phoneNumber"
+          placeholder="Téléphone"
+          [class.is-invalid]="isFieldOnError('phoneNumber')"
+          [class.is-valid]="phoneNumber.valid"
+        >
+        <div class="invalid-feedback"
+             *ngIf="isFieldOnError('phoneNumber') && phoneNumber.errors"
+        >
+          <div *ngIf="phoneNumber.errors['required']">
+            Le numéro de téléphone est obligatoire
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="email">  Email :</label>
+        <input
+          id="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Adresse mail"
+          [class.is-invalid]="isFieldOnError('email')"
+          [class.is-valid]="email.valid"
+        >
+        <div class="invalid-feedback"
+             *ngIf="isFieldOnError('email') && email.errors"
+        >
+          <div *ngIf="email.errors['required']">
+            L'adresse mail est obligatoire
+          </div>
+        </div>
+      </div>
+      <div>
+        <label for="urlAvatar">  urlAvatar :</label>
+        <input
+          id="urlAvatar"
+          type="text"
+          class="form-control"
+          formControlName="urlAvatar"
+          placeholder="Mot de passe"
+          [class.is-invalid]="isFieldOnError('urlAvatar')"
+          [class.is-valid]="urlAvatar.valid"
+        >
+        <div class="invalid-feedback"
+             *ngIf="isFieldOnError('urlAvatar') && urlAvatar.errors"
+        >
+          <div *ngIf="urlAvatar.errors['required']">
+            Le mot de passe est obligatoire
+          </div>
+          
+        </div>
+      </div>
+      
+      <div *ngIf="error" class="invalid-feedback">
+        {{ error }}
+      </div>
+    
+    </form>
+      <div class="container d-flex justify-content-evenly p-3 text-white">
+        
+        <a href="#" class="btn btn-danger" role="button">Annuler</a>
+        
+        <button class="btn btn-success ms-2"
+                (click)="onSubmit()"
+                [disabled]="formGroupUser.invalid"
+          >
+            Soumettre
+          </button>
+          
+      </div>
+    
+    </div>
+    
+    <!-- <button class="btn btn-success mt-5 d-flex mx-auto"
+            (click)="testLogin()"
+    >
+      Login
+    </button> -->
+    
+    
+    
+    

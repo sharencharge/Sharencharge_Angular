@@ -2,14 +2,20 @@
 <div class="row">
     <app-profil-side-menu class="col-3"></app-profil-side-menu>
 
-    <div class="col-6">
+    <div class="col-8" *ngIf="user">
         <div class="row">
-            <div class="col">
-            <input type="text" class="form-control" placeholder="First name" aria-label="First name">
-        </div>
-        <div class="col">
-        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-        </div>
+            <img [src]='user.urlAvatar' alt="photo de profils">
+            <p>{{user.firstname}} {{user.lastname}}</p>
+            <p>{{user.email}}</p>
+            <p>{{user.username}}</p>
+            <p>{{user.phoneNumber}}</p>
+
+            <ng-container *ngFor="let address of user.addresses">
+                <div>
+                    <p>{{address.city}}</p>
+                    <p>{{address.streetNumber}} {{address.streetName}}</p>
+                </div>
+            </ng-container>
         </div>
     </div>
 

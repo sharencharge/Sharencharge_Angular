@@ -26,6 +26,7 @@ export class ProfilBorneComponent implements OnInit{
   findUser(idUSer :number) {
     this.userService.findUserById(idUSer).subscribe(res => {
       this.user = res;
+      console.log(res);
     });
   }
 }

@@ -2,20 +2,24 @@
 <div class="row">
     <app-profil-side-menu class="col-3"></app-profil-side-menu>
 
-    <div class="col-8" *ngIf="user">
+    <div class="col-7" *ngIf="user">
         <div class="row">
-            <img [src]='user.urlAvatar' alt="photo de profils">
-            <p>{{user.firstname}} {{user.lastname}}</p>
-            <p>{{user.email}}</p>
-            <p>{{user.username}}</p>
-            <p>{{user.phoneNumber}}</p>
-
-            <ng-container *ngFor="let address of user.addresses">
-                <div>
-                    <p>{{address.city}}</p>
-                    <p>{{address.streetNumber}} {{address.streetName}}</p>
+                
+            <div class="container">
+                <div class="row">
+                  <div class="col-4"><img [src]='user.urlAvatar' alt="photo de profils" width="150" height="150" class="img-fluid me-2 rounded-circle"></div>
+                  <div class="col-6"> <p>Nom : {{user.firstname}} {{user.lastname}} <br> Email : {{user.email}} 
+                    <br>Portable : {{user.phoneNumber}}  </p>
+                  </div>
+                  
+                <div class="row">
+                  <ng-container *ngFor="let address of user.addresses">
+                    <div class="col-6"><p>Adresse : {{address.streetNumber}} , {{address.streetName}}<br> Ville : {{address.city}}</p>
+                    </div>
+                  </ng-container>
                 </div>
-            </ng-container>
+              </div>
+
         </div>
     </div>
 

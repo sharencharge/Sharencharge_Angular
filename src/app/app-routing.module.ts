@@ -11,11 +11,13 @@ import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component'
 import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
 import { FormUserComponent } from './profil/form-user/form-user.component';
 import { FormBorneComponent } from './profil/form-borne/form-borne.component';
+import { FormAjoutBorneComponent } from './form-ajout-borne/form-ajout-borne.component';
 
 const routes: Routes = [
   {path: '', component: BorneListComponent},
   {path: 'login', component: LoginComponent}, //Page de connexion
   {path: 'register', component: FormInscriptionComponent},
+  {path: 'addborne', component: FormAjoutBorneComponent},
   {path: 'shacha', component: ZShaChaHistComponent},
   {path: 'stations/:idStation', component: BorneDetailsComponent}, // Details station
   {path: 'profil/mydetails', component: ProfilDetailComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user

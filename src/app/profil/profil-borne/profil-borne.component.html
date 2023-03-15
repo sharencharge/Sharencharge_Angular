@@ -1,9 +1,25 @@
+<div class="row">
+    <app-profil-side-menu class="col-3"></app-profil-side-menu>
 
-<p>profil-borne works!</p>
-<app-profil-side-menu></app-profil-side-menu>
-<ng-container *ngIf="user">
+    <div class="col-8" *ngIf="user">
+        <div class="row">
 
-    {{user.firstname}}
-</ng-container>
+            <div class="border-3 border-bottom border-secondary my-5" 
+                *ngFor="let station of user.stations">
+                <div>
+                    <p>Station : {{station.name}}</p>
+                    <p>Modele : {{station.model}}</p>
+                    <p>create At : {{station.createAt}}</p>
+                </div>
+                <div class="border-2 border-top">
+                    <p>Address:</p>
+                    <p>{{station.address.city}}</p>
+                    <p>{{station.address.streetNumber}} {{station.address.streetName}} </p>
 
-<p>profil-borne works!</p>
+                </div>
+                <button class="btn btn-warning my-1" routerLink="/profil/mystation/{{station.id}}/edit">Modifier</button>
+            </div>
+        </div>
+    </div>
+
+</div>

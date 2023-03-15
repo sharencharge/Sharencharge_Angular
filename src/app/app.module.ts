@@ -21,6 +21,9 @@ import { FormAjoutBorneComponent } from './form-ajout-borne/form-ajout-borne.com
 import { FooterComponent } from './footer/footer.component';
 import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component';
 import { AccessGuard } from 'src/config/access-guard';
+import { FormAddressComponent } from './profil/form-address/form-address.component';
+import { FormUserComponent } from './profil/form-user/form-user.component';
+import { FormBorneComponent } from './profil/form-borne/form-borne.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,10 @@ import { AccessGuard } from 'src/config/access-guard';
     FormInscriptionComponent,
     FormAjoutBorneComponent,
     FooterComponent,
-    ZShaChaHistComponent
+    ZShaChaHistComponent,
+    FormAddressComponent,
+    FormUserComponent,
+    FormBorneComponent
 
   ],
   imports: [

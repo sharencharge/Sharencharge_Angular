@@ -7,7 +7,7 @@ export interface IStation{
     name : string,
     model : string,
     image : string,
-    createdAt : Date,
+    createAt : Date,
     user : IUser,
     address : IAddress,
     avaibilities : IAvailibility[]

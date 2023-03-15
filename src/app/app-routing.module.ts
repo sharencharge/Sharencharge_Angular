@@ -9,6 +9,8 @@ import { ProfilDetailComponent } from './profil/profil-detail/profil-detail.comp
 import { ProfilReservationComponent } from './profil/profil-reservation/profil-reservation.component';
 import { ZShaChaHistComponent } from './z-sha-cha-hist/z-sha-cha-hist.component';
 import { FormInscriptionComponent } from './form-inscription/form-inscription.component';
+import { FormUserComponent } from './profil/form-user/form-user.component';
+import { FormBorneComponent } from './profil/form-borne/form-borne.component';
 
 const routes: Routes = [
   {path: '', component: BorneListComponent},
@@ -17,7 +19,9 @@ const routes: Routes = [
   {path: 'shacha', component: ZShaChaHistComponent},
   {path: 'stations/:idStation', component: BorneDetailsComponent}, // Details station
   {path: 'profil/mydetails', component: ProfilDetailComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
+  {path: 'profil/mydetails/edit', component: FormUserComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
   {path: 'profil/mystation', component: ProfilBorneComponent},
+  {path: 'profil/mystation/:idStation/edit', component: FormBorneComponent},
   {path: 'profil/myreservation', component: ProfilReservationComponent},
   /*
   {path: 'register', component: *RegisterComponent*}, //Page d'inscription

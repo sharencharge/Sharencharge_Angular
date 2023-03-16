@@ -1,24 +1,33 @@
 <div class="row">
     <app-profil-side-menu class="col-3"></app-profil-side-menu>
     
-    <div class="col-8" *ngIf="user">
-        <div class="row">
-            <h1>Mes reservations</h1>
-
-            <div class="border-3 border-bottom border-secondary my-5" 
+    <div class="col-9 row p-4 container" *ngIf="user">
+        <h3>Mes reservations</h3>
+            <div class="col-6" 
                 *ngFor="let rent of user.rents">
-
-                <p>id : {{rent.id}}</p>
-                <p>buyAt : {{rent.byuAt |date}}</p>
-                <p>status : {{rent.status}}</p>
-                <div *ngFor="let avail of rent.availabilities">
-                    <p>Réservé <p>
-                    <p>de {{avail.beginHour}}H à {{avail.endHour}}H</p>
-                    <p>{{avail.station.id}}</p>
-                    <p>{{avail.station.name}}</p>
-                </div>
+                    
+                        <div class="p-3 border bg-light my-3">
+                            <p>Date d'achat : {{rent.byuAt |date}} <br>Status : {{rent.status}}</p>
+                            <div *ngFor="let avail of rent.availabilities">
+                                <p>Réservé de {{avail.beginHour}}H à {{avail.endHour}}H <br>Propriétaire borne :{{avail.station.name}}</p>
+                            </div>
+                        </div>
             </div>
-        </div>
     </div>
-
 </div>
+
+
+
+<!-- justify-content-around my-4 border-top border-4 border-success 
+<div class="container overflow-hidden">
+  <div class="row gy-5">
+    <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+    <div class="col-6">
+      <div class="p-3 border bg-light">Custom column padding</div>
+    </div>
+  </div>
+</div>
+
+-->

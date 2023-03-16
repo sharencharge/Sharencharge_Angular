@@ -1,5 +1,7 @@
 
-<nav class="navbar navbar-expand-lg navbar-light">
+<ng-container *ngIf="!isConnected else menuConnected">
+
+  <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <div class="d-flex">
         <span class="me-2"><img src="../../assets/logo.png" alt="logo" width="90" height="90" class="img-fluid me-2" class="rounded-circle"></span>
@@ -11,5 +13,23 @@
       </div>
     </div>
   </nav>
+</ng-container>
+
+<ng-template #menuConnected>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <div class="d-flex">
+        <span class="me-2"><img src="../../assets/logo.png" alt="logo" width="90" height="90" class="img-fluid me-2" class="rounded-circle"></span>
+        <span class="p-3"><h1 class="navbar-brand" routerLink=""> SHACHA</h1></span>
+      </div>
+      <div class=".d-inline-flex">
+        <a class="navbar-brand" routerLink="/profil/myreservations">Mes Reservations</a>
+        <a class="navbar-brand" routerLink="/profil/mystations">Mes Stations</a>
+        <a class="navbar-brand" routerLink="/profil/mydetails">Mes Informations</a>
+        <a class="navbar-brand" (click)="logout()">Déconnexion</a>
+      </div>
+    </div>
+  </nav>
+</ng-template>
 
   

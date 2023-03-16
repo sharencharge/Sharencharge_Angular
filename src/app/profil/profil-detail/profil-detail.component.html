@@ -1,5 +1,8 @@
 <div class="row">
-    <app-profil-side-menu class="col-3 my-5"></app-profil-side-menu>
+    <app-profil-side-menu 
+      class="col-3 my-5"
+      [menuName]="'Detail'"
+    ></app-profil-side-menu>
 
     <div class="col-7" *ngIf="user">
       

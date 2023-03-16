@@ -1,16 +1,16 @@
 <div class="container p-4">
   <table class="table table-bordered border-success">
         <tr>
-          <td class="menu-selected" routerLink="/profil/mydetails">Mes coordonnées</td>
+          <td [ngClass]="menuName.includes('Detail')? 'menu-selected' : 'no-selected'" routerLink="/profil/mydetails">Mes coordonnées</td>
         </tr>
         <tr>         
-          <td class="no-selected" routerLink="/profil/mystations">Mes bornes</td>         
+          <td [ngClass]="menuName.includes('Borne') ? 'menu-selected' : 'no-selected'" routerLink="/profil/mystations">Mes bornes</td>         
         </tr>
         <tr>        
-          <td class="no-selected" routerLink="/profil/myreservations">Mes reservations</td>
+          <td [ngClass]="menuName.includes('Reservation') ? 'menu-selected' : 'no-selected'" routerLink="/profil/myreservations">Mes reservations</td>
         </tr>
         <tr>        
-            <td class="no-selected">Autres</td>
+            <td [ngClass]="menuName.includes('Autres') ? 'menu-selected' : 'no-selected'">Autres</td>
         </tr>
     </table>
   </div>

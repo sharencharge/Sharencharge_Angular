@@ -1,11 +1,12 @@
 <div class="row">
     <app-profil-side-menu 
-        class="col-3"
+        class="col-3 my-5"
         [menuName]="'Borne'"
     >
     </app-profil-side-menu>
-
+   
     <div class="col-9 row p-4 container p-3" *ngIf="user">
+        <h3>Mes bornes </h3>
         <div class="row">
 
             <div class="col-6 p-3 border bg-light my-3" *ngFor="let station of user.stations">

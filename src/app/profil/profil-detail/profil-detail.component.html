@@ -4,10 +4,10 @@
       [menuName]="'Detail'"
     ></app-profil-side-menu>
 
-    <div class="col-7" *ngIf="user">
-      
-        <div class="row">
-                
+    <div class="col-7  p-5" *ngIf="user">
+           <div class="row">
+            
+            <h3 class="text-success">Bonjour {{user.firstname}},</h3>   
             <div class="container my-5">
                 <div class="row">
                   <div class="col-4"><img [src]='user.urlAvatar' alt="photo de profils" width="150" height="150" class="img-fluid me-2 rounded-circle"></div>

@@ -12,6 +12,7 @@ import { FormInscriptionComponent } from './form-inscription/form-inscription.co
 import { FormUserComponent } from './profil/form-user/form-user.component';
 import { FormBorneComponent } from './profil/form-borne/form-borne.component';
 import { FormAjoutBorneComponent } from './form-ajout-borne/form-ajout-borne.component';
+import { FormAddressComponent } from './profil/form-address/form-address.component';
 
 const routes: Routes = [
   {path: '', component: BorneListComponent},
@@ -22,9 +23,11 @@ const routes: Routes = [
   {path: 'stations/:idStation', component: BorneDetailsComponent}, // Details station
   {path: 'profil/mydetails', component: ProfilDetailComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
   {path: 'profil/mydetails/edit', component: FormUserComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
-  {path: 'profil/mystation', component: ProfilBorneComponent},
-  {path: 'profil/mystation/:idStation/edit', component: FormBorneComponent},
-  {path: 'profil/myreservation', component: ProfilReservationComponent},
+  {path: 'profil/mydetails/address/edit', component: FormAddressComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
+  {path: 'profil/mydetails/address/edit/:idAddress', component: FormAddressComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
+  {path: 'profil/mystations', component: ProfilBorneComponent},
+  {path: 'profil/mystations/:idStation/edit', component: FormBorneComponent},
+  {path: 'profil/myreservations', component: ProfilReservationComponent},
   /*
   {path: 'register', component: *RegisterComponent*}, //Page d'inscription
   {path: 'stations/:cityName', component: *BorneListComponent*}, //Liste des stations après une recherche

@@ -1,16 +1,33 @@
 
-<app-search></app-search>
+<app-search (eventSearchValue)="updateDatas($event)"></app-search>
 
 <div class="container my-5">
-    <div class="row">
-      <ng-container *ngFor="let station of stations">
-        <div class="col-lg-4 col-md-6 col-sm-12 my-3">
-          <app-borne-show [station] = station></app-borne-show>
-        </div>
+    <div class="row justify-content-around" *ngIf="stations" >
+      <div class="col-11 row justify-content-between">
+        <button class="btn btn-info col-2" 
+        [disabled]="page ==0"
+        (click)="pageDown()">
+        previous
+      </button>
+      <button class="btn btn-info col-2"
+        (click)="pageUp()">
+        next
+      </button>
+    </div>
+      <ng-container *ngIf="stations.length > 0 else blockVide">
+        <ng-container *ngFor="let station of stations">
+          <div class="col-lg-4 col-md-6 col-sm-12 my-3">
+            <app-borne-show [station] = station></app-borne-show>
+          </div>
+        </ng-container>
       </ng-container>
     </div>
 </div>
-<div class="container-form">
-  <div class="container">
+
+<ng-template #blockVide>
+  <div>
+    <p class="h2 col-6">
+      No Station Found
+    </p>
   </div>
-</div>
+</ng-template> 

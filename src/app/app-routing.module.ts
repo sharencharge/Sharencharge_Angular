@@ -16,7 +16,7 @@ import { FormAddressComponent } from './profil/form-address/form-address.compone
 
 const routes: Routes = [
   {path: '', component: BorneListComponent},
-  {path: 'login', component: LoginComponent}, //Page de connexion
+  {path: 'login', component: LoginComponent }, //Page de connexion
   {path: 'register', component: FormInscriptionComponent},
   {path: 'addborne', component: FormAjoutBorneComponent},
   {path: 'shacha', component: ZShaChaHistComponent},
@@ -25,9 +25,9 @@ const routes: Routes = [
   {path: 'profil/mydetails/edit', component: FormUserComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
   {path: 'profil/mydetails/address/edit', component: FormAddressComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
   {path: 'profil/mydetails/address/edit/:idAddress', component: FormAddressComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]}, // Details user
-  {path: 'profil/mystations', component: ProfilBorneComponent},
-  {path: 'profil/mystations/:idStation/edit', component: FormBorneComponent},
-  {path: 'profil/myreservations', component: ProfilReservationComponent},
+  {path: 'profil/mystations', component: ProfilBorneComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]},
+  {path: 'profil/mystations/:idStation/edit', component: FormBorneComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]},
+  {path: 'profil/myreservations', component: ProfilReservationComponent, data:{requiresLogin: true}, canActivate: [ AccessGuard ]},
   /*
   {path: 'register', component: *RegisterComponent*}, //Page d'inscription
   {path: 'stations/:cityName', component: *BorneListComponent*}, //Liste des stations après une recherche

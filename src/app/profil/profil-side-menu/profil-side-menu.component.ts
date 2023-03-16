@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-profil-side-menu',
@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class ProfilSideMenuComponent {
 
+  @Input() 
+  menuName : string ="";
+  
 }

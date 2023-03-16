@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BorneShowComponent } from './borne-show/borne-show.component';
 import { SearchComponent } from './search/search.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BorneListComponent } from './borne-list/borne-list.component';
 import { BorneDetailsComponent } from './borne-details/borne-details.component';
@@ -31,7 +30,6 @@ import { FormBorneComponent } from './profil/form-borne/form-borne.component';
     NavbarComponent,
     BorneShowComponent,
     SearchComponent,
-    SidebarComponent,
     BorneListComponent,
     BorneDetailsComponent,
     ProfilDetailComponent,

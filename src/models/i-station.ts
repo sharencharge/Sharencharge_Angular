@@ -10,5 +10,5 @@ export interface IStation{
     createAt : Date,
     user : IUser,
     address : IAddress,
-    avaibilities : IAvailibility[]
+    availabilities : IAvailibility[]
 }

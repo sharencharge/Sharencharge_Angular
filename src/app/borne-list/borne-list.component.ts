@@ -9,6 +9,9 @@ import { ApiStationService } from 'src/service/api-station.service';
 })
 export class BorneListComponent {
   stations : IStation[] | null = null;
+  itemCount : number = 6;
+  page : number = 0;
+  search : string = "";
 
   constructor(private apiStationService : ApiStationService) {
   }
@@ -18,8 +21,28 @@ export class BorneListComponent {
   }
 
   findAllStations() : void {
-    this.apiStationService.findAllStationsPageable(6,0).subscribe(res =>{
-      this.stations =  res;
-    })
+    if( this.search.length >= 0 ){
+      console.log(this.search);
+      
+      this.apiStationService.findStationByCity(this.search,this.itemCount, this.page).subscribe(res => {
+        this.stations = res;
+      })
+    }
+  }
+
+  updateDatas(search: string): void {
+    console.log(search);
+    this.search = search
+    this.page = 0;
+    this.findAllStations()
+  }
+
+  pageUp(){
+    this.page ++;
+    this.findAllStations()
+  }
+  pageDown(){
+    this.page --;
+    this.findAllStations()
   }
 }

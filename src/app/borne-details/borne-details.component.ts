@@ -24,6 +24,8 @@ export class BorneDetailsComponent implements OnInit{
   findStationById(idStation: number) {
     this.apiStationService.findStation(idStation).subscribe(res =>{
       this.station = res;
+      console.log(res);
+      
     })
   }
 

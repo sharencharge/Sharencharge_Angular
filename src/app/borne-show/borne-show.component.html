@@ -1,5 +1,5 @@
 
-<div class="borne-show-album pb-2 router-link" *ngIf="station" routerLink="/">
+<div class="borne-show-album pb-2 router-link" *ngIf="station" routerLink="/stations/{{station.id}}">
     <img [src]="station.image" [alt]="station.name">
     <!-- <p>{{createdDate}}</p> -->    
     <h4 class="text-center mt-1">{{station.name}}</h4>
@@ -10,7 +10,7 @@
             Localisation: {{station.address.city}}
             <br>
             <!-- TODO : GET USER FROM STATION -->
-            Proprietaire: Miluska Orrego
+            Proprietaire: {{station.user.firstname}} {{station.user.lastname}}
         </p>
     </div>
     <!-- <button (click)="choixClient()" class="btn btn-success mt-1 d-flex mx-auto"> Réserver</button> -->

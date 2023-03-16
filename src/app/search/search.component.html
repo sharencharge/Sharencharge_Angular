@@ -4,17 +4,19 @@
         le partage est toujours mieux,<br> partage ta borne !
       </h2>
 
-      <form class="d-flex input-group">
+      <div class="d-flex input-group">
         <input
-          type="search"
+          type="text"
           class="form-control rounded input-form"
           placeholder="Trouvez une borne"
           aria-label="Search"
           aria-describedby="search-addon"
+          [(ngModel)]="searchValue"
+          (keyup)="onKeyUp()"
         />
         <span class="input-group-text text-white border-0  bg-secondary" id="search-addon">
           <i class="fas fa-search"></i>
         </span>
-      </form>
+      </div>
     </div>
   </nav>

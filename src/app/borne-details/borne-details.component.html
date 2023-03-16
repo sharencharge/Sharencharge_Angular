@@ -1,5 +1,39 @@
-<p>borne-details works!</p>
-<ng-container *ngIf="station">
-    <p>nom de la station : {{station.name}}</p>
 
+<ng-container *ngIf="station" class="row justify-content-around">
+    <div class="offset-2 col-8 text-center">
+        <p>nom de la station : {{station.name}}</p>
+        <p>nom du propriétaire : {{station.user.firstname}} {{station.user.lastname}}</p>
+    </div>
+    <div class="container">
+       <h2>Lundi</h2>
+        <div *ngFor="let avail of station.availabilities" class="offset-2 col-8 text-center">
+            <p *ngIf="avail.weekDay == 'Lundi'">De {{avail.beginHour}}H à {{avail.endHour}}H  Les {{avail.weekDay}}</p>
+        </div>
+       <h2>Mardi</h2>
+        <div *ngFor="let avail of station.availabilities" class="offset-2 col-8 text-center">
+            <p *ngIf="avail.weekDay == 'Mardi'">De {{avail.beginHour}}H à {{avail.endHour}}H  Les {{avail.weekDay}}</p>
+        </div>
+       <h2>Mercredi</h2>
+        <div *ngFor="let avail of station.availabilities" class="row  justify-content-around">
+            <div class="col-2" *ngIf="avail.weekDay == 'Mercredi'">
+                <p>{{avail.beginHour}}H à {{avail.endHour}}H</p>
+            </div>
+        </div>
+       <h2>Jeudi</h2>
+        <div *ngFor="let avail of station.availabilities" class="offset-2 col-8 text-center">
+            <p *ngIf="avail.weekDay == 'Jeudi'">De {{avail.beginHour}}H à {{avail.endHour}}H  Les {{avail.weekDay}}</p>
+        </div>
+       <h2>Vendredi</h2>
+        <div *ngFor="let avail of station.availabilities" class="offset-2 col-8 text-center">
+            <p *ngIf="avail.weekDay == 'Vendredi'">De {{avail.beginHour}}H à {{avail.endHour}}H  Les {{avail.weekDay}}</p>
+        </div>
+       <h2>Samedi</h2>
+        <div *ngFor="let avail of station.availabilities" class="offset-2 col-8 text-center">
+            <p *ngIf="avail.weekDay == 'Samedi'">De {{avail.beginHour}}H à {{avail.endHour}}H  Les {{avail.weekDay}}</p>
+        </div>
+       <h2>Dimanche</h2>
+        <div *ngFor="let avail of station.availabilities" class="offset-2 col-8 text-center">
+            <p *ngIf="avail.weekDay == 'Dimanche'">De {{avail.beginHour}}H à {{avail.endHour}}H  Les {{avail.weekDay}}</p>
+        </div>
+    </div>
 </ng-container>

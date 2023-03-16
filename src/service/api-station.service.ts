@@ -28,4 +28,8 @@ export class ApiStationService {
   findStation(id : number) : Observable<IStation> {
     return this.http.get<IStation>(this.url+"stations/"+id);
   }
+
+  findStationByCity(search: string, countItem: number, numberPage: number) :  Observable<IStation[]>{
+    return this.http.get<IStation[]>(this.url+"stations/search?search="+search+"&limit="+countItem+"&page="+numberPage);
+  }
 }

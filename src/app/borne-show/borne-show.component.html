@@ -1,6 +1,6 @@
 
 <div class="borne-show-album pb-2 router-link" *ngIf="station" routerLink="/stations/{{station.id}}">
-    <img [src]="station.image" [alt]="station.name">
+    <img class="bg-white" [src]="station.image" [alt]="station.name">
     <!-- <p>{{createdDate}}</p> -->    
     <h4 class="text-center mt-1">{{station.name}}</h4>
     <div class="px-2">

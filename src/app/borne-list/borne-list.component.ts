@@ -12,6 +12,8 @@ export class BorneListComponent {
   itemCount : number = 6;
   page : number = 0;
   search : string = "";
+  maxPage : number = 0;
+  totalItem: number = 0;
 
   constructor(private apiStationService : ApiStationService) {
   }
@@ -25,7 +27,10 @@ export class BorneListComponent {
       console.log(this.search);
       
       this.apiStationService.findStationByCity(this.search,this.itemCount, this.page).subscribe(res => {
-        this.stations = res;
+        this.stations = res.body;
+        //console.log(res.headers);
+        //console.log(res.headers.get("x_nb_max_pages"));
+        //this.totalItem = res.headers.get("x_nb_max_elements");
       })
     }
   }

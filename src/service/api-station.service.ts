@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { IStation } from 'src/models/i-station';
@@ -29,7 +29,7 @@ export class ApiStationService {
     return this.http.get<IStation>(this.url+"stations/"+id);
   }
 
-  findStationByCity(search: string, countItem: number, numberPage: number) :  Observable<IStation[]>{
-    return this.http.get<IStation[]>(this.url+"stations/search?search="+search+"&limit="+countItem+"&page="+numberPage);
+  findStationByCity(search: string, countItem: number, numberPage: number) :  Observable<HttpResponse<IStation[]>>{
+    return this.http.get<IStation[]>(this.url+"stations/search?search="+search+"&limit="+countItem+"&page="+numberPage, {observe: 'response'});
   }
 }
